@@ -39,6 +39,7 @@ module Hyperclient
     def initialize(url, &_block)
       @link = { 'href' => url }
       @entry_point = self
+      @async_options = {enabled: true}
       yield self if block_given?
     end
 
@@ -110,6 +111,22 @@ module Hyperclient
     def faraday_block=(value)
       raise ConnectionAlreadyInitializedError if @connection
       @faraday_block = value
+    end
+
+    # Public: Set async options.
+    #
+    # value    - A Hash containing the asynchronous processing options. Use
+    # {enabled: false} to disable the default behavior of processing requests
+    # asynchronously using futures.
+    def async_options=(**value)
+      @async_options = value
+    end
+
+    # Public: Read async options.
+    #
+    # Returns a Hash.
+    def async_options
+      @async_options
     end
 
     private

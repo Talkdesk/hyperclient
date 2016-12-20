@@ -56,6 +56,12 @@ module Hyperclient
           entry_point._url.must_equal 'http://my.api.org'
         end
       end
+
+      describe 'async_options' do
+        it 'sets the enabled option to on by default' do
+          entry_point.async_options[:enabled].must_equal true
+        end
+      end
     end
 
     describe 'faraday_options' do
