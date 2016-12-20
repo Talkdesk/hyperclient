@@ -167,9 +167,17 @@ module Hyperclient
 
     def http_method(method, body = nil)
       @resource = begin
-        response = Futuroscope::Future.new do
-          @entry_point.connection.run_request(method, _url, body, nil)
-        end
+        do_async = @entry_point.async_options[:enabled]
+
+        response =
+          if do_async
+            Futuroscope::Future.new do
+              @entry_point.connection.run_request(method, _url, body, nil)
+            end
+          else
+            @entry_point.connection.run_request(method, _url, body, nil)
+          end
+
         Resource.new(response.body, @entry_point, response)
       end
     end
