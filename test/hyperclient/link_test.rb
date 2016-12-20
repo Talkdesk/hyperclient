@@ -177,9 +177,9 @@ module Hyperclient
         link._get
       end
 
-      describe 'when entry_point.async_options is set to {enabled: false}' do
+      describe 'when entry_point.async_options is set to { enabled: false }' do
         it 'executes requests synchronously without futuroscope' do
-          entry_point.async_options = {enabled: false}
+          entry_point.async_options = { enabled: false }
 
           link = Link.new('key', { 'href' => '/productions/1' }, entry_point)
 
@@ -217,9 +217,9 @@ module Hyperclient
         link._options
       end
 
-      describe 'when entry_point.async_options is set to {enabled: false}' do
+      describe 'when entry_point.async_options is set to { enabled: false }' do
         it 'executes requests synchronously without futuroscope' do
-          entry_point.async_options = {enabled: false}
+          entry_point.async_options = { enabled: false }
 
           link = Link.new('key', { 'href' => '/productions/1' }, entry_point)
 
@@ -257,9 +257,9 @@ module Hyperclient
         link._head
       end
 
-      describe 'when entry_point.async_options is set to {enabled: false}' do
+      describe 'when entry_point.async_options is set to { enabled: false }' do
         it 'executes requests synchronously without futuroscope' do
-          entry_point.async_options = {enabled: false}
+          entry_point.async_options = { enabled: false }
 
           link = Link.new('key', { 'href' => '/productions/1' }, entry_point)
 
@@ -297,9 +297,9 @@ module Hyperclient
         link._delete
       end
 
-      describe 'when entry_point.async_options is set to {enabled: false}' do
+      describe 'when entry_point.async_options is set to { enabled: false }' do
         it 'executes requests synchronously without futuroscope' do
-          entry_point.async_options = {enabled: false}
+          entry_point.async_options = { enabled: false }
 
           link = Link.new('key', { 'href' => '/productions/1' }, entry_point)
 
@@ -345,9 +345,9 @@ module Hyperclient
         link._post
       end
 
-      describe 'when entry_point.async_options is set to {enabled: false}' do
+      describe 'when entry_point.async_options is set to { enabled: false }' do
         it 'executes requests synchronously without futuroscope' do
-          entry_point.async_options = {enabled: false}
+          entry_point.async_options = { enabled: false }
 
           link = Link.new('key', { 'href' => '/productions/1' }, entry_point)
 
@@ -393,9 +393,9 @@ module Hyperclient
         link._put
       end
 
-      describe 'when entry_point.async_options is set to {enabled: false}' do
+      describe 'when entry_point.async_options is set to { enabled: false }' do
         it 'executes requests synchronously without futuroscope' do
-          entry_point.async_options = {enabled: false}
+          entry_point.async_options = { enabled: false }
 
           link = Link.new('key', { 'href' => '/productions/1' }, entry_point)
 
@@ -441,9 +441,9 @@ module Hyperclient
         link._patch
       end
 
-      describe 'when entry_point.async_options is set to {enabled: false}' do
+      describe 'when entry_point.async_options is set to { enabled: false }' do
         it 'executes requests synchronously without futuroscope' do
-          entry_point.async_options = {enabled: false}
+          entry_point.async_options = { enabled: false }
 
           link = Link.new('key', { 'href' => '/productions/1' }, entry_point)
 

@@ -39,7 +39,7 @@ module Hyperclient
     def initialize(url, &_block)
       @link = { 'href' => url }
       @entry_point = self
-      @async_options = {enabled: true}
+      @async_options = { enabled: true }
       yield self if block_given?
     end
 
